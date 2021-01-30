@@ -1,26 +1,16 @@
-import React, { useState } from "react";
-import {
-  Grid,
-  Typography,
-  Button,
-  Paper,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-} from "@material-ui/core";
+import React from "react";
+import { Grid, Typography, Button, Paper } from "@material-ui/core";
 import Rating from "@material-ui/lab/Rating";
 import useStyles from "./Product.styles";
 //import DeliveryOptions from "./DeliveryOptions/DeliveryOptions.component";
 import { useDispatch } from "react-redux";
 import { cartActionsTypes } from "../../redux/cart/cart.actions";
-import { Link, useRouteMatch } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import CartQtyButton from "../CartItems/CartItem/CartButton/CartQtyButtons.component";
 
 const { ADD_TO_CART } = cartActionsTypes;
 
 const Product = ({ product }) => {
-  const match = useRouteMatch();
   const dispatch = useDispatch();
   const classes = useStyles();
   const { description, imageUrl, name, price } = product;

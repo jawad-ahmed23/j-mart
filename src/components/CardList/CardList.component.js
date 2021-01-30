@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 
 export default function CardList(props) {
   const products = useSelector((state) => state.products);
-  const { title } = props;
   const classes = useStyles();
 
   return (
